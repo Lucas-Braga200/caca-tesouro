@@ -131,6 +131,7 @@ Essa função percorre através de estruturas de repetição a quantidade de lin
 for (let i = 0; i < quantidadeLinha; i++) {
   // Cria linha.
   const linha = document.createElement('tr');
+  $(linha).addClass('linha');
 
   // Percorre as colunas
   for (let j = 0; j < quantidadeColuna; j++) {
@@ -138,6 +139,7 @@ for (let i = 0; i < quantidadeLinha; i++) {
     const coluna = document.createElement('td');
 
     $(coluna).addClass('posicao');
+    $(coluna).click(clicarPosicao);
     $(coluna).data('aberto', false);
 
     // Adiciona as colunas à linha.
@@ -224,7 +226,7 @@ while(j < posicoes.length) {
     // Reseta o contador do while para verificar novamente toda a lista de posição.
     j = 0;
   } else {
-    // Se não igual, continua percorrendo a lista.
+    // Se não for igual, continua percorrendo a lista.
     j++;
   }
 }
