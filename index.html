@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    .posicao {
+      width: 30px;
+      height: 30px;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+    .posicao:hover {
+      background-color: #f1f1f1;
+    }
+    .posicao.aberto {
+      background-color: #f1f1f1;
+    }
+
+    .erro {
+      color: red;
+    }
+    .sucesso {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <!-- Select de dificuldade -->
+  <select id="select-dificuldade">
+    <option disabled selected>Dificuldade</option>
+    <option value="0">Fácil</option>
+    <option value="1">Médio</option>
+    <option value="2">Díficil</option>
+  </select>
+
+  <!-- Botão para iniciar o jogo -->
+  <button id="botao-jogar">Jogar</button>
+
+  <!-- Contador -->
+  <div id="contador">0</div>
+
+  <!-- Tabela caça tesouros -->
+  <table id="tabela-caca-tesouro">
+  </table>
+
+  <!-- Campo de alerta -->
+  <div id="alerta" class="alerta erro"></div>
+
+  <!-- Jquery importação -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Código do caça tesouro -->
+  <script src="script.js"></script>
+</body>
+</html>
